@@ -1,0 +1,30 @@
+{
+  "name": "glad.c",
+  "version": "1.2025.10",
+  "description": "Vulkan/GL/GLES/EGL/GLX/WGL Loader based on the official specs, using glad by David Herberth (2013).",
+  "keywords": [
+    "c",
+    "library",
+    "opengl",
+    "vulkan",
+    "gles",
+    "egl",
+    "glx",
+    "wgl",
+    "loader",
+    "bindings"
+  ],
+  "homepage": "https://github.com/nodef/glad.c#readme",
+  "bugs": {
+    "url": "https://github.com/nodef/glad.c/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/glad.c.git"
+  },
+  "license": "WTFPL",
+  "author": "wolfram77@gmail.com",
+  "scripts": {
+    "test": "bash build.sh test"
+  }
+}
