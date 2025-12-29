@@ -1,6 +1,6 @@
 {
   "name": "glad.c",
-  "version": "1.2025.10",
+  "version": "1.2025.12",
   "description": "Vulkan/GL/GLES/EGL/GLX/WGL Loader based on the official specs, using glad by David Herberth (2013).",
   "keywords": [
     "c",
@@ -26,5 +26,12 @@
   "author": "wolfram77@gmail.com",
   "scripts": {
     "test": "bash build.sh test"
+  },
+  "devDependencies": {
+    "glfw3.c": "^3.4.2",
+    "stb.c": "^2.17.1"
+  },
+  "dependencies": {
+    "vulkan.c": "^1.4.0"
   }
 }
