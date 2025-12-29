@@ -14,12 +14,14 @@ Vulkan/GL/GLES/EGL/GLX/WGL Loader based on the official specifications for **C/C
 >  - glsc2: Version 2.0
 >  - glx: Version 1.4
 >  - vulkan: Version 1.4
->  - vulkansc: Version 1.4
+>  - vulkansc: Version 1.4 (no loader)
 >  - wgl: 1.0
 > - Extensions: All
 > - Options:
 >  - header only: Generate a header only version of glad
->  - mx: Enables support for multiple GL contexts
+>  - loader: Include internal loaders for APIs
+
+<!-- >  - mx: Enables support for multiple GL contexts -->
 
 <br>
 
