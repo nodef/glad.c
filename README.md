@@ -23,6 +23,8 @@ Vulkan/GL/GLES/EGL/GLX/WGL Loader based on the official specifications for **C/C
 
 <!-- >  - mx: Enables support for multiple GL contexts -->
 
+[glad]: https://github.com/Dav1dde/glad
+
 <br>
 
 ## Installation
@@ -33,70 +35,45 @@ Run:
 $ npm i glad.c
 ```
 
-And then include the needed headers in your source files as follows:
+And then include the needed headers as follows:
 
 ```c
 // main.c
 #define GLAD_EGL_IMPLEMENTATION
+#include <glad/egl.h>       // or, <glad-mx/egl.h>
 #define GLAD_GL_IMPLEMENTATION
+#include <glad/gl.h>        // or, <glad-mx/gl.h>
 #define GLAD_GLES1_IMPLEMENTATION
+#include <glad/gles1.h>     // or, <glad-mx/gles1.h>
 #define GLAD_GLES2_IMPLEMENTATION
+#include <glad/gles2.h>     // or, <glad-mx/gles2.h>
 #define GLAD_GLSC2_IMPLEMENTATION
+#include <glad/glsc2.h>     // or, <glad-mx/glsc2.h>
 #define GLAD_GLX_IMPLEMENTATION
+#include <glad/glx.h>       // or, <glad-mx/glx.h>
 #define GLAD_VULKAN_IMPLEMENTATION
+#include <glad/vulkan.h>    // or, <glad-mx/vulkan.h>
 #define GLAD_VULKANSC_IMPLEMENTATION
+#include <glad/vulkansc.h>  // or, <glad-mx/vulkansc.h>
 #define GLAD_WGL_IMPLEMENTATION
-#include "node_modules/glad.c/glad/egl.h"
-#include "node_modules/glad.c/glad/gl.h"
-#include "node_modules/glad.c/glad/gles1.h"
-#include "node_modules/glad.c/glad/gles2.h"
-#include "node_modules/glad.c/glad/glsc2.h"
-#include "node_modules/glad.c/glad/glx.h"
-#include "node_modules/glad.c/glad/vulkan.h"
-#include "node_modules/glad.c/glad/vulkansc.h"
-#include "node_modules/glad.c/glad/wgl.h"
+#include <glad/wgl.h>       // or, <glad-mx/wgl.h>
+// NOTE: glad-mx headers are for multiple context support
 
 int main() { /* ... */ }
 ```
 
-And then compile with `clang` or `gcc` as usual.
-
-```bash
-$ clang main.c  # or, use gcc
-$ gcc   main.c
-```
-
-You may also use a simpler approach:
-
-```c
-// main.c
-#define GLAD_EGL_IMPLEMENTATION
-#define GLAD_GL_IMPLEMENTATION
-#define GLAD_GLES1_IMPLEMENTATION
-#define GLAD_GLES2_IMPLEMENTATION
-#define GLAD_GLSC2_IMPLEMENTATION
-#define GLAD_GLX_IMPLEMENTATION
-#define GLAD_VULKAN_IMPLEMENTATION
-#define GLAD_VULKANSC_IMPLEMENTATION
-#define GLAD_WGL_IMPLEMENTATION
-#include <glad/egl.h>
-#include <glad/gl.h>
-#include <glad/gles1.h>
-#include <glad/gles2.h>
-#include <glad/glsc2.h>
-#include <glad/glx.h>
-#include <glad/vulkan.h>
-#include <glad/vulkansc.h>
-#include <glad/wgl.h>
-
-int main() { /* ... */ }
-```
-
-If you add the path `node_modules/glad.c` to your compiler's include paths.
+Finally, compile while adding the path `node_modules/glad.c` to your compiler's include paths.
 
 ```bash
 $ clang -I./node_modules/glad.c main.c  # or, use gcc
 $ gcc   -I./node_modules/glad.c main.c
+```
+
+You may also use a simpler approach with the [cpoach](https://www.npmjs.com/package/cpoach.sh) tool, which automatically adds the necessary include paths of all the installed dependencies for your project.
+
+```bash
+$ cpoach clang main.c  # or, use gcc
+$ cpoach gcc   main.c
 ```
 
 <br>
@@ -178,8 +155,7 @@ on the Khronos / OpenGL-Specification issue tracker.
 <br>
 
 
+[![](https://raw.githubusercontent.com/qb40/designs/gh-pages/0/image/11.png)](https://wolfram77.github.io)<br>
 [![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/Dav1dde/glad)
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
 ![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/glad.c)
-
-[glad]: https://github.com/Dav1dde/glad

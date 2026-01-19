@@ -1,6 +1,6 @@
 {
   "name": "glad.c",
-  "version": "1.2025.12",
+  "version": "1.2025.13",
   "description": "Vulkan/GL/GLES/EGL/GLX/WGL Loader based on the official specs, using glad by David Herberth (2013).",
   "keywords": [
     "c",
